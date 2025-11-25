@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Namma Kudla – Complete Travel Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+/* ----------------------------------
+   THEME COLORS
+---------------------------------- */
+:root {
+  --green: #0b6e4f;
+  --blue: #0b4f6e;
+  --bg: #f3f6f7;
+  --text: #222;
+  --card: #fff;
+}
+
+.dark {
+  --bg: #0f0f0f;
+  --text: #eee;
+  --card: #1a1a1a;
+}
+
+/* ----------------------------------
+   GLOBAL
+---------------------------------- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+h2 {
+  color: var(--green);
+  margin-top: 40px;
+}
+
+/* ----------------------------------
+   HEADER
+---------------------------------- */
+header {
+  background: var(--green);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 26px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+header small {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ----------------------------------
+   NAVIGATION
+---------------------------------- */
+nav {
+  background: var(--blue);
+  padding: 12px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------------
+   GENERIC CARD
+---------------------------------- */
+.card {
+  background: var(--card);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 12px;
+  border-left: 5px solid var(--green);
+}
+
+/* ----------------------------------
+   SLIDER
+---------------------------------- */
+.slide {
+  display: none;
+  width: 100%;
+  height: 280px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* ----------------------------------
+   PLACE CARDS
+---------------------------------- */
+.place-card {
+  background: var(--card);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.place-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.place-card-info {
+  padding: 15px;
+}
+
+/* ----------------------------------
+   GALLERY
+---------------------------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 12px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ----------------------------------
+   CONTACT
+---------------------------------- */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button {
+  background: var(--green);
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #084f38;
+}
+
+/* ----------------------------------
+   DARK MODE BUTTON
+---------------------------------- */
+.theme-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 12px 18px;
+  background: var(--blue);
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ----------------------------------
+   FOOTER
+---------------------------------- */
+footer {
+  background: var(--green);
+  padding: 18px;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  Namma Kudla – Explore Mangalore
+  <small>The coastal beauty of Karnataka</small>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#places">Places</a>
+  <a href="#food">Food</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container" id="home">
+
+  <!-- Slider -->
+  <img class="slide" src="kudla.jpg">
+  <img class="slide" src="clock.jpg">
+  <img class="slide" src="bandaru.jpg">
+
+  <h2>Welcome to Kudla</h2>
+
+  <div class="card">
+    Kudla (Mangalore) is a coastal paradise known for beaches, temples,
+    seafood, culture and peaceful lifestyle. This website gives complete
+    travel details to explore the beauty of Kudla.
+  </div>
+
+</div>
+
+<!-- ABOUT SECTION -->
+<div class="container" id="about">
+  <h2>About Kudla</h2>
+
+  <div class="card">
+    Kudla, also known as Mangalore, is one of Karnataka’s most loved cities.
+    It is famous for:
+    <ul>
+      <li>Clean beaches</li>
+      <li>Historic temples</li>
+      <li>Delicious coastal food</li>
+      <li>Friendly culture</li>
+      <li>Education & heritage</li>
+    </ul>
+  </div>
+</div>
+
+<!-- PLACES -->
+<div class="container" id="places">
+  <h2>Popular Places</h2>
+
+  <div class="place-card">
+    <img src="panambur.jpg">
+    <div class="place-card-info">
+      <h3>Panambur Beach</h3>
+      Famous for sunsets and water sports.
+    </div>
+  </div>
+
+  <div class="place-card">
+    <img src="tannir.jpeg">
+    <div class="place-card-info">
+      <h3>Tannirbhavi Beach</h3>
+      Calm and peaceful beach perfect for evenings.
+    </div>
+  </div>
+
+  <div class="place-card">
+    <img src="kudroli.jpeg">
+    <div class="place-card-info">
+      <h3>Kudroli Temple</h3>
+      Known for lights, architecture and festivals.
+    </div>
+  </div>
+</div>
+
+<!-- FOOD SECTION -->
+<div class="container" id="food">
+  <h2>Food Specialities</h2>
+
+  <div class="card">
+    <h3>🍛 Neer Dose</h3>
+    Soft rice dosa served with coconut chutney.
+  </div>
+
+  <div class="card">
+    <h3>🍤 Fish Fry</h3>
+    Traditional Mangalorean-style spicy fish fry.
+  </div>
+
+  <div class="card">
+    <h3>🍗 Chicken Ghee Roast</h3>
+    Signature dish made with Kundapur masala.
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div class="container" id="gallery">
+  <h2>Gallery</h2>
+
+  <div class="gallery-grid">
+    <img src="kudla.jpg">
+    <img src="panambur.jpg">
+    <img src="tannir.jpeg">
+    <img src="kudroli.jpeg">
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="container" id="contact">
+  <h2>Contact Us</h2>
+
+  <div class="card">
+    <label>Your Name</label>
+    <input type="text" placeholder="Enter your name">
+
+    <label>Your Message</label>
+    <textarea rows="5" placeholder="Write your message..."></textarea>
+
+    <button>Send Message</button>
+  </div>
+</div>
+
+<footer>
+  © 2025 Kudla Tourism • All Rights Reserved  
+  <br>
+  Visitors Count: <b id="visitorCount"></b>
+</footer>
+
+<div class="theme-btn" onclick="toggleTheme()">🌙 Theme</div>
+
+<!-- JAVASCRIPT -->
+<script>
+
+// DARK MODE
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
+
+// VISIT COUNTER
+if (!localStorage.visits) {
+  localStorage.visits = 1;
+} else {
+  localStorage.visits = Number(localStorage.visits) + 1;
+}
+document.getElementById("visitorCount").innerHTML = localStorage.visits;
+
+// SLIDER
+let index = 0;
+function showSlides() {
+  const slides = document.getElementsByClassName("slide");
+  for (let i=0; i<slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  index++;
+  if (index > slides.length) index = 1;
+  slides[index-1].style.display = "block";
+  setTimeout(showSlides, 2500);
+}
+showSlides();
+
+</script>
+
+</body>
+</html>
